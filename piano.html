@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<title>Welcome Oscar</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<style>
+body, html {height: 100%}
+body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
+.menu {display: none}
+.bgimg {
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-image:url("sikun-peng.github.io/image/IMG_20160504_172512.jpg");
+    min-height: 90%;
+}
+</style>
+<body>
+
+<!-- Navbar (sit on top) -->
+<div class="w3-top w3-hide-small">
+  <div class="w3-bar w3-xlarge w3-black w3-opacity w3-hover-opacity-off" id="myNavbar">
+    <a href="sikun-peng.github.io/index.html" class="w3-bar-item w3-button">HOME</a>
+    <a href="sikun-peng.github.io/menu.html" class="w3-bar-item w3-button">MENU</a>   
+    <a href="sikun-peng.github.io/piano.html" class="w3-bar-item w3-button">MUSIC</a>
+    <a href="sikun-peng.github.io/about.html" class="w3-bar-item w3-button">ABOUT</a>
+    <a href="sikun-peng.github.io/contact.html" class="w3-bar-item w3-button">CONTACT</a>
+  </div>
+</div>
+
+<!-- Music Container -->
+<div class="w3-container w3-grey w3-padding-128 w3-xxxlarge" id="piano">
+  <div class="w3-content">
+  
+    <h1 class="w3-center w3-jumbo" style="margin-bottom:64px">Oscar's Piano Pieces</h1>
+      
+    <div class="w3-row w3-center w3-border w3-border-dark-grey">
+      <a href="javascript:void(0)" onclick="openMusic(event, 'Chopin');" id="musicLink">
+        <div class="w3-col s4 tablink w3-padding-large w3-hover-red">Chopin</div>
+      </a>
+      <a href="javascript:void(0)" onclick="openMusic(event, 'Liszt');">
+        <div class="w3-col s4 tablink w3-padding-large w3-hover-red">Liszt</div>
+      </a>
+      <a href="javascript:void(0)" onclick="openMusic(event, 'else');">
+        <div class="w3-col s4 tablink w3-padding-large w3-hover-red">ke</div>
+      </a>
+    </div>
+
+    <div id="Chopin" class="w3-container piano w3-padding-32 w3-white">
+      <h1><b>Piece2</b><span class="w3-right w3-tag w3-dark-grey w3-round">
+        <object type="application/x-shockwave-flash" width="30" height="25" data="https://www.youtube.com/v/KpOtuoHL45Y?version=2&theme=dark">
+           <param name="movie" value="https://www.youtube.com/v/KpOtuoHL45Y?version=2&theme=dark"/><param name="wmode" value="transparent"/>
+        </object></span></h1>
+      <p class="w3-text-grey">Description</p>
+      <hr>   
+  
+      <h1><b>Piece1</b><span class="w3-right w3-tag w3-dark-grey w3-round">
+      <object type="application/x-shockwave-flash" width="30" height="25" data="https://www.youtube.com/v/wygy721nzRc?version=2&theme=dark">
+      <param name="movie" value="https://www.youtube.com/v/wygy721nzRc?version=2&theme=dark"/><param name="wmode" value="transparent"/>
+      </object></span></h1>
+      <p class="w3-text-grey">Description</p>
+      <hr>
+    </div>
+
+    <div id="Liszt" class="w3-container piano w3-padding-32 w3-white">
+      <h1><b>Piece2</b><span class="w3-right w3-tag w3-dark-grey w3-round">
+        <object type="application/x-shockwave-flash" width="30" height="25" data="https://www.youtube.com/v/KpOtuoHL45Y?version=2&theme=dark">
+           <param name="movie" value="https://www.youtube.com/v/KpOtuoHL45Y?version=2&theme=dark"/><param name="wmode" value="transparent"/>
+        </object></span></h1>
+      <p class="w3-text-grey">Description</p>
+      <hr>
+    </div>
+    
+<footer class="w3-center w3-black w3-padding-48 w3-xxlarge">
+  <p>Oscar is a standard size Yorkie</p>
+</footer>
+      
+<!-- Add Google Maps -->
+<script>
+function openMusic(evt, menuName) {
+  var i, x, tablinks;
+  x = document.getElementsByClassName("piano");
+  for (i = 0; i < x.length; i++) {
+     x[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablink");
+  for (i = 0; i < x.length; i++) {
+     tablinks[i].className = tablinks[i].className.replace(" w3-red", "");
+  }
+  document.getElementById(menuName).style.display = "block";
+  evt.currentTarget.firstElementChild.className += " w3-red";
+}
+document.getElementById("musicLink").click();
+</script>
+
+</body>
+</html>

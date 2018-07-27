@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<title>Welcome Oscar</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<style>
+body, html {height: 100%}
+body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
+.menu {display: none}
+.bgimg {
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-image:url("sikun-peng.github.io/image/IMG_20160504_172512.jpg");
+    min-height: 90%;
+}
+</style>
+<body>
+
+<!-- Navbar (sit on top) -->
+<div class="w3-top w3-hide-small">
+  <div class="w3-bar w3-xlarge w3-black w3-opacity w3-hover-opacity-off" id="myNavbar">
+    <a href="sikun-peng.github.io/index.html" class="w3-bar-item w3-button">HOME</a>
+    <a href="sikun-peng.github.io/menu.html" class="w3-bar-item w3-button">MENU</a>
+    <a href="sikun-peng.github.io/piano.html" class="w3-bar-item w3-button">MUSIC</a>
+    <a href="sikun-peng.github.io/about.html" class="w3-bar-item w3-button">ABOUT</a>
+    <a href="sikun-peng.github.io/contact.html" class="w3-bar-item w3-button">CONTACT</a>
+  </div>
+</div>
+
+<!-- Menu Container -->
+<div class="w3-container w3-black w3-padding-64 w3-xxlarge" id="menu">
+  <div class="w3-content">
+
+    <h1 class="w3-center w3-jumbo" style="margin-bottom:64px">Oscar's Menu</h1>
+    <div class="w3-row w3-center w3-border w3-border-dark-grey">
+      <a href="javascript:void(0)" onclick="openMenu(event, 'Dessert');" id="myLink">
+        <div class="w3-col s4 tablink w3-padding-large w3-hover-red">Dessert</div>
+      </a>
+      <a href="javascript:void(0)" onclick="openMenu(event, 'Chinese');">
+        <div class="w3-col s4 tablink w3-padding-large w3-hover-red">Chinese</div>
+      </a>
+      <a href="javascript:void(0)" onclick="openMenu(event, 'Thai');">
+        <div class="w3-col s4 tablink w3-padding-large w3-hover-red">Thai</div>
+      </a>
+    </div>
+
+    <div id="Dessert" class="w3-container menu w3-padding-32 w3-white">
+      <h1><b>Cake</b> <span class="w3-right w3-tag w3-dark-grey w3-round">2 hours</span></h1>
+      <p class="w3-text-grey">1,2,3,4</p>
+      <hr>
+
+      <h1><b>Eggtart</b> <span class="w3-right w3-tag w3-dark-grey w3-round">$0.00</span></h1>
+      <p class="w3-text-grey">1,2,3,4</p>
+      <hr>
+
+      <h1><b>CheeseCake</b> <span class="w3-right w3-tag w3-dark-grey w3-round">$0.00</span></h1>
+      <p class="w3-text-grey">1,2,3,4</p>
+      <hr>
+
+    </div>
+
+    <div id="Chinese" class="w3-container menu w3-padding-32 w3-white">
+      <h1><b>Chicken</b> <span class="w3-tag w3-grey w3-round">Popular</span> <span class="w3-right w3-tag w3-dark-grey w3-round">1hour</span></h1>
+      <p class="w3-text-grey">1,2,3,4f</p>
+      <hr>
+
+      <h1><b>Soup</b> <span class="w3-right w3-tag w3-dark-grey w3-round">$0.50</span></h1>
+      <p class="w3-text-grey">1,2,3,4</p>
+    </div>
+
+
+    <div id="Thai" class="w3-container menu w3-padding-32 w3-white">
+      <h1><b>Bruschetta</b> <span class="w3-right w3-tag w3-dark-grey w3-round">$0.50</span></h1>
+      <p class="w3-text-grey">1,2,3,4</p>
+      <hr>
+
+      <h1><b>Tomozzarella</b> <span class="w3-right w3-tag w3-dark-grey w3-round">0.50</span></h1>
+      <p class="w3-text-grey">1,2,3,4</p>
+    </div><br>
+
+  </div>
+</div>
+
+<footer class="w3-center w3-black w3-padding-48 w3-xxlarge">
+ <img src="sikun-peng.github.io/image/logo4.jpeg" >
+  <p>Oscar is a standard size Yorkie</p>
+</footer>
+
+<!-- Add Google Maps -->
+<script>
+
+// Tabbed Menu
+function openMenu(evt, menuName) {
+  var i, x, tablinks;
+  x = document.getElementsByClassName("menu");
+  for (i = 0; i < x.length; i++) {
+     x[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablink");
+  for (i = 0; i < x.length; i++) {
+     tablinks[i].className = tablinks[i].className.replace(" w3-red", "");
+  }
+  document.getElementById(menuName).style.display = "block";
+  evt.currentTarget.firstElementChild.className += " w3-red";
+}
+document.getElementById("myLink").click();
+
+</script>
+
+</body>
+</html>
